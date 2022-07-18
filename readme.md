@@ -11,7 +11,7 @@ e.g. After you pressed the "open door" button, the door opens, but to reflect wo
 
 ![](https://images.plurk.com/6CTRxAvVj8tLQ8KHHh64Es.png)
 
-That would be hard to do by hand, especially since the copies you need is proportional to $2^{|W|}$, where $W$ is the set of all possible world state.
+That would be hard to do by hand, especially since the copies you need is proportional to $2^{b}$, where $b$ is the count of bits needed to represent a world state.
 
 ## So how do I use this?
 
