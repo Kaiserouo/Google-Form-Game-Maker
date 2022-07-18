@@ -125,10 +125,10 @@ class Form(JsonConvertible):
 # a world state is a representation of world scenario
 # (e.g. is the button pressed? does the player have some item?)
 # a world state should be a data class, and should have the ability
-# to encode itself to unique integer.
-# It should also provide an iterator that iterates through all
+# to encode itself to unique integer in range [0, lenAllStates()].
+# lenAllStates() should return the number of all possible states
+# It should also provide an generator that iterates through all
 # possible world states.
-# Also lenAllStates() should return the number of all possible states
 class WorldState:
     def encodeState(self) -> int:
         raise NotImplementedError()
@@ -139,7 +139,7 @@ class WorldState:
     def lenAllStates(cls) -> int:
         raise NotImplementedError()
 
-# A scene is a section factory, generate section by world state
+# A scene is a section factory, generate section based by world state
 # the section it generates should have the same id it makes
 class Scene:
     base = 0
@@ -231,12 +231,6 @@ def createForm(form: Form, start_goto_id: str):
     }
     question_setting = form_service.forms().batchUpdate(formId=form_id, body=request).execute()
     return form_id
-
-def getForm():
-    form_id = '10JBE06R8JXicgM7olVzUz_VfM7hCvSt8CE9SD1xl_4k'
-    form_service = getFormService()
-    get_result = form_service.forms().get(formId=form_id).execute()
-    print(get_result)
 
 # assign ID (range) to classes
 def assignId(scene_cls_ls: list[type], single_scene_cls_ls: list[type], worldstate_cls: type):
