@@ -2,7 +2,7 @@
 
 Inspired from [this anonymous plurk](https://www.plurk.com/p/ox2otv) about a game made by Google Form.
 
-Tackles nasty things like Google Form API and defines all kinds of items and interfaces, so you can make your own game more easily based on that.
+Tackles nasty things like Google Form API and defines all kinds of items and interfaces in `util.py`, so you can make your own game more easily based on that.
 
 ## Uh why do I need that?
 Making a game out of Google Form is basically realizing a finite state machine (FSM) in Google Form. And we know FSM can be very large in size, and in gaming, it's mostly because you interact with the world and the world changes.
