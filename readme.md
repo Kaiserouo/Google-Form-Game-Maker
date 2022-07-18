@@ -11,7 +11,7 @@ e.g. After you pressed the "open door" button, the door opens, but to reflect wo
 
 ![](https://images.plurk.com/6CTRxAvVj8tLQ8KHHh64Es.png)
 
-That would be hard to do by hand, especially since the copies you need is proportional to $2^{b}$, where $b$ is the count of bits needed to represent a world state.
+That would be hard to do by hand, especially since the copies you need is proportional to $2^{b}$, where $b$ is the count of bits needed to represent a world state. That is gonna go way higher than you expected if you need to make a more complex game. (e.g. if you want to make some kind of inventory system, the bits you need is at least the number of different kinds of item there are in the world, without optimization.)
 
 ## So how do I use this?
 
