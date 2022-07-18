@@ -27,3 +27,5 @@ If you complete the guide above, execute this should make the simple game form.
 ```bash
 python simple_game.py
 ```
+
+Do note that **Google Cloud Platform is supposed to be a paid service. But [if your usage is under the Free Tier limits you should be fine](https://cloud.google.com/free).** At least I did not paid for this. This application shouldn't use too much quota.
